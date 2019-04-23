@@ -7,6 +7,12 @@ import SEO from "../components/seo";
 function ProjectsPage() {
   const projects = [
     {
+      title: "Bandmate App",
+      description: "This is the mobile application for Bandmate built with React Native",
+      link: "https://gitlab.com/captainskippah/bandmate-app",
+      technologies: ["React Native"]
+    },
+    {
       title: "Bandmate",
       description:
         "This is my personal project idea.\nA Tinder-like app for musicians who are looking for others they can collaborate with.",
