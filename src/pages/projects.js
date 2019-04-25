@@ -7,6 +7,12 @@ import SEO from "../components/seo";
 function ProjectsPage() {
   const projects = [
     {
+      title: "HappyBeauty PH",
+      description: "Quick Inventory and POS system done within 2 days.\nMade possible because codes written for Monjayfer were reusable.",
+      link: "https://gitlab.com/captainskippah/hbph",
+      technologies: ["Lumen", "Nuxt"]
+    },
+    {
       title: "Bandmate App",
       description: "This is the mobile application for Bandmate built with React Native",
       link: "https://gitlab.com/captainskippah/bandmate-app",
@@ -39,6 +45,12 @@ function ProjectsPage() {
         "This project is where I first started to practice Test Driven Development with PHPUnit and Extreme Programming... writing codes that are needed at the moment only and nothing more.\nVue was used here as a SPA and Nuxt wasn't a thing back then.",
       link: "https://gitlab.com/captainskippah/vetline",
       technologies: ["Laravel", "Vue", "Test Driven Development (TDD)"]
+    },
+    {
+      title: "Drs. Sarmiento",
+      description: "My first project with Laravel.\nYou can compare my current progress with this project and see how different I write my codes now.",
+      link: "https://gitlab.com/captainskippah/drs-sarmiento-system",
+      technologies: ["Laravel", "Semantic UI"]
     }
   ];
 
