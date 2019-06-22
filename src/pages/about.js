@@ -17,15 +17,15 @@ function AboutPage() {
         </header>
 
         <p className="text-xl text-justify mt-4">
-          I write framework-agnostic codes and always like to integrate them with Laravel.
-        </p>
-        <p className="text-xl text-justify mt-2">
-          I constantly try to improve the quality of my work and I'm always
-          trying out new kinds of stuff.
+          I aspire to write framework-agnostic codes.
         </p>
         <p className="text-xl text-justify mt-2">
           Trending technologies come and go. Understanding principles and knowing how and when
           to implement the right pattern at the right time is forever.
+        </p>
+        <p className="text-xl text-justify mt-2">
+          I constantly try to improve the quality of my work and I'm always
+          trying out new kinds of stuff.
         </p>
 
         <div className="mt-4">
