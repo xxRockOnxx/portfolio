@@ -17,12 +17,15 @@ function AboutPage() {
         </header>
 
         <p className="text-xl text-justify mt-4">
-          I am a passionate developer and it's been 4 years now since I started
-          my career.
+          I write framework-agnostic codes and always like to integrate them with Laravel.
         </p>
         <p className="text-xl text-justify mt-2">
           I constantly try to improve the quality of my work and I'm always
           trying out new kinds of stuff.
+        </p>
+        <p className="text-xl text-justify mt-2">
+          Trending technologies come and go. Understanding principles and knowing how and when
+          to implement the right pattern at the right time is forever.
         </p>
 
         <div className="mt-4">
@@ -44,6 +47,7 @@ function AboutPage() {
             PHP
             <ul>
               <li>Laravel</li>
+              <li>Lumen</li>
               <li>Doctrine 2</li>
               <li>PHPUnit</li>
             </ul>
@@ -96,14 +100,11 @@ function AboutPage() {
           <li>Linux</li>
           <li>Docker</li>
           <li>REST APIs</li>
+          <li>CQRS</li>
+          <li>Event Sourcing</li>
           <li>Agile Development</li>
           <li>Test Driven Development</li>
-          <li>
-            Domain Driven Development
-            <ul>
-              <li>CQRS</li>
-            </ul>
-          </li>
+          <li>Domain Driven Development</li>
         </ul>
       </section>
 
@@ -118,7 +119,6 @@ function AboutPage() {
 
         <ul className="mt-4 leading-loose">
           <li>Electron</li>
-          <li>React Native</li>
           <li>GraphQL</li>
           <li>Serverless Application</li>
           <li>Go</li>

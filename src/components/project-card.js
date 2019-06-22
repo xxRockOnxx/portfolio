@@ -7,7 +7,7 @@ function ProjectCard({ title, description, link, technologies }) {
     <li className="rounded shadow-md mt-8">
       <a
         href={link}
-        className="inline-block w-full font-bold no-underline text-black text-xl px-6 pt-4"
+        className="inline-block w-full font-bold no-underline text-black text-xl px-6 pt-4 hover:text-underline"
       >
         {title}
       </a>

@@ -8,9 +8,9 @@ function ProjectsPage() {
   const projects = [
     {
       title: "HappyBeauty PH",
-      description: "Quick Inventory and POS system done within 2 days.\nMade possible because codes written for Monjayfer were reusable.",
+      description: "Merchandise Inventory/Accounting software",
       link: "https://gitlab.com/captainskippah/hbph",
-      technologies: ["Lumen", "Nuxt"]
+      technologies: ["Lumen", "Nuxt", "Event Sourcing", "CQRS", "DDD"]
     },
     {
       title: "Bandmate App",
