@@ -43,7 +43,7 @@ function Layout({ children }) {
                 </a>
               </p>
 
-              <div className="w-full md:w-auto md:ml-auto text-center md:text-right">
+              <div className="mt-2 w-full md:mt-0 md:w-auto md:ml-auto text-center md:text-right">
                 <a
                   href="https://github.com/xxRockOnxx"
                   className="font-bold no-underline text-white"

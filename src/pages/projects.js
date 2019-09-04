@@ -1,48 +1,82 @@
 import React from "react";
 
 import Layout from "../components/layout";
-import ProjectCard from "../components/project-card";
 import SEO from "../components/seo";
 
-function ProjectsPage() {
+function Chip({ text, ...props }) {
+  let className = "inline-block bg-grey-light rounded-full px-3 py-1 text-sm font-semibold text-grey-darker";
+
+  if (props.className) {
+    className += ` ${props.className}`;
+  }
+
+  return (
+    <span className={className}>{text}</span>
+  );
+}
+
+function ProjectCard({ title, description, link, technologies }) {
+  return (
+    <li className="rounded shadow-md mt-8">
+      <div className="px-6 pt-6">
+        <a
+          href={link}
+          className="inline-flex items-center font-bold no-underline text-black text-xl hover:underline"
+        >
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/>
+          </svg>
+          <span className="ml-3">{title}</span>
+        </a>
+      </div>
+
+      <p
+        className="whitespace-pre-wrap leading-normal text-lg text-grey-darker px-6 py-4"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
+
+      <div className="px-6 pb-6">
+        {technologies.map((technology, index) => (
+          <Chip className={index === 0 ? "" : "ml-3"} text={technology} key={index} />
+        ))}
+      </div>
+    </li>
+  );
+}
+
+export default function() {
   const projects = [
     {
       title: "HappyBeauty PH",
-      description: "Merchandise Inventory/Accounting software",
+      description: "Merchandise Inventory/Accounting software.\nCQRS is used here to provide different report views and Event Sourcing to have a history of the cash flow and the intent of the user.",
       link: "https://gitlab.com/captainskippah/hbph",
       technologies: ["Lumen", "Nuxt", "Event Sourcing", "CQRS", "DDD"]
     },
     {
-      title: "Bandmate App",
-      description: "This is the mobile application for Bandmate built with React Native",
-      link: "https://gitlab.com/captainskippah/bandmate-app",
-      technologies: ["React Native"]
-    },
-    {
       title: "Bandmate",
       description:
-        "This is my personal project idea.\nA Tinder-like app for musicians who are looking for others they can collaborate with.",
+        "A Tinder-like app for musicians who are looking for others they can collaborate with.",
       link: "https://gitlab.com/captainskippah/bandmate",
-      technologies: ["Koa", "Typescript", "TypeORM", "InversifyJS", "Flutter"]
+      technologies: ["React Native", "Typescript", "Mobx", "InversifyJS"]
     },
     {
       title: "Monjayfer API",
       description:
-        "The backend for Monjayfer website.\nPracticed applying Domain Driven Design on this project.\nEven though the frontend would be on a different server, Session auth was still used in favor of simplicity.",
+        "The backend for Monjayfer website.\nPracticed applying concept Domain Driven Design on this project.\nThis is a system for a veterinary clinic to track pet records, client appointments, and also a basic POS system for selling products onsite.",
       link: "https://gitlab.com/captainskippah/monjayfer-api",
       technologies: ["Lumen", "Domain Driven Design (DDD)", "CQRS"]
     },
     {
       title: "Monjayfer UI",
       description:
-        "The frontend for Monjayfer website.\nThe public page was generated using <code>nuxt:generate</code> and the admin pages were rendered on the server side.\nSince the backend offers Session auth only for simplicity and the website is hosted on a different domain, CORS problem was solved as simple as using the http-proxy-middleware only.",
+        "The frontend for Monjayfer website.\nThe public page was a static generated page and the admin pages were server side rendered.",
       link: "https://gitlab.com/captainskippah/monjayfer-ui",
       technologies: ["Nuxt", "Vuetify", "Express"]
     },
     {
       title: "Vetline",
       description:
-        "This project is where I first started to practice Test Driven Development with PHPUnit and Extreme Programming... writing codes that are needed at the moment only and nothing more.\nVue was used here as a SPA and Nuxt wasn't a thing back then.",
+        "This project is a system for a veterinary clinic to track pet records and client appointments and also a reservation system for their \"Pet Hotel\".\nThis is when I first started to practice Test Driven Development and Extreme Programming.\nVue was used here as a SPA and Nuxt wasn't a thing back then.",
       link: "https://gitlab.com/captainskippah/vetline",
       technologies: ["Laravel", "Vue", "Test Driven Development (TDD)"]
     },
@@ -58,13 +92,7 @@ function ProjectsPage() {
     <Layout>
       <SEO title="Projects" />
 
-      <header>
-        <h2 className="text-4xl">Projects</h2>
-        <div className="text-xl mt-4">
-          These are all personal projects that exists in my GitLab repository.
-          <br />I have no access to some old remote projects anymore.
-        </div>
-      </header>
+      <h1 className="text-4xl">Projects</h1>
 
       <ul className="mt-4 list-reset">
         {projects.map(project => (
@@ -74,5 +102,3 @@ function ProjectsPage() {
     </Layout>
   );
 }
-
-export default ProjectsPage;
