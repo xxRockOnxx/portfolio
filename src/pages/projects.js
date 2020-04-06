@@ -47,6 +47,18 @@ function ProjectCard({ title, description, link, technologies }) {
 export default function() {
   const projects = [
     {
+      title: "OBS Facebook Live Comments",
+      description: "A free website that allows personal Facebook Live comments feed to be on your stream without creating a page.",
+      link: "https://github.com/xxRockOnxx/obs-fb-live-comments",
+      technologies: ["Javascript"]
+    },
+    {
+      title: "3rdWheel",
+      description: "A fun project I created for Valentine's day that allows people to register and look for third wheels for their Valentines.",
+      link: "https://rdwheel.firebaseapp.com/",
+      technologies: ["Nuxt", "Firebase", "TailwindCSS"]
+    },
+    {
       title: "HappyBeauty PH",
       description: "Merchandise Inventory/Accounting software.\nCQRS is used here to provide different report views and Event Sourcing to have a history of the cash flow and the intent of the user.",
       link: "https://gitlab.com/captainskippah/hbph",
@@ -58,33 +70,6 @@ export default function() {
         "A Tinder-like app for musicians who are looking for others they can collaborate with.",
       link: "https://gitlab.com/captainskippah/bandmate",
       technologies: ["React Native", "Typescript", "Mobx", "InversifyJS"]
-    },
-    {
-      title: "Monjayfer API",
-      description:
-        "The backend for Monjayfer website.\nPracticed applying concept Domain Driven Design on this project.\nThis is a system for a veterinary clinic to track pet records, client appointments, and also a basic POS system for selling products onsite.",
-      link: "https://gitlab.com/captainskippah/monjayfer-api",
-      technologies: ["Lumen", "Domain Driven Design (DDD)", "CQRS"]
-    },
-    {
-      title: "Monjayfer UI",
-      description:
-        "The frontend for Monjayfer website.\nThe public page was a static generated page and the admin pages were server side rendered.",
-      link: "https://gitlab.com/captainskippah/monjayfer-ui",
-      technologies: ["Nuxt", "Vuetify", "Express"]
-    },
-    {
-      title: "Vetline",
-      description:
-        "This project is a system for a veterinary clinic to track pet records and client appointments and also a reservation system for their \"Pet Hotel\".\nThis is when I first started to practice Test Driven Development and Extreme Programming.\nVue was used here as a SPA and Nuxt wasn't a thing back then.",
-      link: "https://gitlab.com/captainskippah/vetline",
-      technologies: ["Laravel", "Vue", "Test Driven Development (TDD)"]
-    },
-    {
-      title: "Drs. Sarmiento",
-      description: "My first project with Laravel.\nYou can compare my current progress with this project and see how different I write my codes now.",
-      link: "https://gitlab.com/captainskippah/drs-sarmiento-system",
-      technologies: ["Laravel", "Semantic UI"]
     }
   ];
 
