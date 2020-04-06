@@ -25,6 +25,19 @@ module.exports = {
         tailwind: true,
         purgeOnly: ["src/css/style.css"]
       }
+    },
+    {
+      resolve: 'gatsby-plugin-fathom',
+      options: {
+        // Fathom server URL. Defaults to `cdn.usefathom.com`
+        trackingUrl: 'lemuel-fathom.herokuapp.com',
+        // Unique site id
+        siteId: 'REQMN',
+        // Domain whitelist
+        whitelistHostnames: [
+          'lemuelflores.netlify.com'
+        ]
+      }
     }
   ]
 };
