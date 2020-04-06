@@ -13,11 +13,11 @@ function AboutPage() {
 
       <section className="leading-normal pb-8 border-b">
         <header className="text-center md:text-left">
-          <h2 className="text-4xl">About Me</h2>
+          <h2 className="text-4xl font-bold">About Me</h2>
         </header>
 
         <p className="text-xl text-justify mt-4">
-          I aspire to write framework-agnostic codes.
+          I aspire writing framework-agnostic codes.
         </p>
         <p className="text-xl text-justify mt-2">
           Trending technologies come and go. Understanding principles and knowing how and when
@@ -30,19 +30,19 @@ function AboutPage() {
 
         <div className="mt-4">
           <span className="font-bold">Email: </span>
-          <a href="mailto:is101.lemuel@gmail.com">is101.lemuel@gmail.com</a>
+          <a href="mailto:is101.lemuel@gmail.com" className="underline">is101.lemuel@gmail.com</a>
         </div>
       </section>
 
       <section className="mt-8">
         <header className="leading-normal text-center md:text-left">
-          <h2 className="text-4xl">Skills and Experience</h2>
+          <h2 className="text-4xl font-bold">Skills and Experience</h2>
         </header>
 
-        <ul className="mt-4 leading-loose">
+        <ul className="mt-4 pl-10 list-disc leading-loose">
           <li>
             PHP
-            <ul>
+            <ul className="pl-10 list-disc">
               <li>Laravel / Lumen</li>
               <li>Doctrine</li>
               <li>PHPUnit</li>
@@ -50,11 +50,11 @@ function AboutPage() {
           </li>
           <li>
             Javascript
-            <ul>
+            <ul className="pl-10 list-disc">
               <li>Typescript</li>
               <li>
                 Vue
-                <ul>
+                <ul className="pl-10 list-disc">
                   <li>Vuex</li>
                   <li>Vuetify</li>
                   <li>Nuxt</li>
@@ -62,14 +62,14 @@ function AboutPage() {
               </li>
               <li>
                 React
-                <ul>
+                <ul className="pl-10 list-disc">
                   <li>Gatsby</li>
                   <li>React Native</li>
                 </ul>
               </li>
               <li>
                 NodeJS
-                <ul>
+                <ul className="pl-10 list-disc">
                   <li>Koa</li>
                   <li>Express</li>
                 </ul>

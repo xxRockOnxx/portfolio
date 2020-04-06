@@ -20,12 +20,12 @@ function Layout({ children }) {
         <div className="flex flex-col font-sans min-h-screen text-grey-darkest">
           <Header siteTitle={data.site.siteMetadata.title} />
 
-          <div className="flex flex-col flex-1 max-w-xl mx-auto px-4 py-8 md:p-8 w-full">
+          <div className="flex flex-col flex-1 max-w-5xl mx-auto px-4 py-8 md:p-8 w-full">
             {children}
           </div>
 
-          <footer className="bg-blue">
-            <div className="flex max-w-xl mx-auto p-4 md:p-8 text-sm flex-wrap md:flex-no-wrap">
+          <footer className="bg-blue-500">
+            <div className="flex max-w-5xl mx-auto p-4 md:p-8 text-sm flex-wrap md:flex-no-wrap">
               <p className="text-white w-full md:w-auto text-center md:text-left">
                 Created with{" "}
                 <a

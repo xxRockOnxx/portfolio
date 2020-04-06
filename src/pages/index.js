@@ -22,14 +22,14 @@ function IndexPage() {
           alt="Author"
         />
 
-        <h1 className="inline-block my-8">Hey there, I'm Lemuel Flores</h1>
+        <h1 className="inline-block my-8 text-3xl text-gray-800 font-bold">Hey there, I'm Lemuel Flores</h1>
 
         <p className="text-2xl mb-4">
           I love quality codes and I am constantly learning new kinds of stuff.
         </p>
         <p className="text-2xl">
           I can work with various kinds of projects. Learn more{" "}
-          <Link to="/about" className="font-bold">
+          <Link to="/about" className="underline font-medium">
             about me
           </Link>
           .
