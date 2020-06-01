@@ -80,8 +80,8 @@ export default function() {
       <h1 className="text-4xl font-bold">Projects</h1>
 
       <ul className="mt-4 list-reset">
-        {projects.map(project => (
-          <ProjectCard {...project} />
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
         ))}
       </ul>
     </Layout>

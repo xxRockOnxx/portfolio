@@ -13,6 +13,11 @@ h6 {
     @apply text-gray-800 tracking-wide;
 }
 
+pre {
+    overflow: auto;
+    width: 100%;
+}
+
 @tailwind components;
 
 @tailwind utilities;

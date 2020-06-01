@@ -74,6 +74,8 @@ function AboutPage() {
                   <li>Express</li>
                 </ul>
               </li>
+              <li>VideoJS</li>
+              <li>VelocityJS</li>
             </ul>
           </li>
           <li>VPS</li>
