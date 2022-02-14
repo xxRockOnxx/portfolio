@@ -1,23 +1,25 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
     <nav className="bg-teal-500">
-      <div className="flex flex-wrap items-center justify-between max-w-5xl mx-auto p-4 md:p-8">
-        <Link to="/" className="flex items-center no-underline text-white">
-          <span className="font-bold text-xl tracking-wide">{siteTitle}</span>
+      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between p-4 md:p-8">
+        <Link to="/">
+          <span className="text-xl font-bold tracking-wide text-white">
+            {siteTitle}
+          </span>
         </Link>
 
         <button
-          className="block md:hidden border border-white flex items-center px-3 py-2 rounded text-white"
+          className="block flex items-center rounded border border-white px-3 py-2 text-white md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
-            className="fill-current h-3 w-3"
+            className="h-3 w-3 fill-current"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -29,33 +31,33 @@ function Header({ siteTitle }) {
         <div
           className={`${
             isExpanded ? `block` : `hidden`
-          } md:block md:flex md:items-center w-full md:w-auto`}
+          } w-full md:block md:flex md:w-auto md:items-center`}
         >
           <div className="text-sm">
             <Link
               to="/"
-              className="block mt-4 md:inline-block md:mt-0 mr-6 no-underline text-white"
+              className="mt-4 mr-6 block text-white no-underline md:mt-0 md:inline-block"
             >
               Home
             </Link>
 
             <Link
               to="/about"
-              className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-white"
+              className="mt-4 mr-6 block text-white no-underline md:mt-0 md:inline-block"
             >
               About
             </Link>
 
             <Link
               to="/blog"
-              className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-white"
+              className="mt-4 mr-6 block text-white no-underline md:mt-0 md:inline-block"
             >
               Blog
             </Link>
 
             <Link
               to="/projects"
-              className="block md:inline-block mt-4 md:mt-0 no-underline text-white"
+              className="mt-4 block text-white no-underline md:mt-0 md:inline-block"
             >
               Projects
             </Link>
@@ -67,11 +69,11 @@ function Header({ siteTitle }) {
 }
 
 Header.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 };
 
 Header.defaultProps = {
-  siteTitle: ``
+  siteTitle: ``,
 };
 
 export default Header;
