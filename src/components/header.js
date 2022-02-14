@@ -33,26 +33,19 @@ function Header({ siteTitle }) {
             isExpanded ? `block` : `hidden`
           } w-full md:block md:flex md:w-auto md:items-center`}
         >
-          <div className="text-sm">
+          <div className="space-x-6 text-sm">
             <Link
               to="/"
-              className="mt-4 mr-6 block text-white no-underline md:mt-0 md:inline-block"
+              className="mt-4 block text-white no-underline md:mt-0 md:inline-block"
             >
               Home
             </Link>
 
             <Link
               to="/about"
-              className="mt-4 mr-6 block text-white no-underline md:mt-0 md:inline-block"
+              className="mt-4 block text-white no-underline md:mt-0 md:inline-block"
             >
               About
-            </Link>
-
-            <Link
-              to="/blog"
-              className="mt-4 mr-6 block text-white no-underline md:mt-0 md:inline-block"
-            >
-              Blog
             </Link>
 
             <Link
@@ -60,6 +53,13 @@ function Header({ siteTitle }) {
               className="mt-4 block text-white no-underline md:mt-0 md:inline-block"
             >
               Projects
+            </Link>
+
+            <Link
+              to="/blog"
+              className="mt-4 block text-white no-underline md:mt-0 md:inline-block"
+            >
+              Blog
             </Link>
           </div>
         </div>

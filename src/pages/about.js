@@ -8,7 +8,16 @@ function AboutPage() {
     <Layout>
       <SEO
         title="About"
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[
+          `gatsby`,
+          `tailwindcss`,
+          `react`,
+          `next.js`,
+          `vue`,
+          `nuxt`,
+          `laravel`,
+          `lumen`,
+        ]}
       />
 
       <section className="border-b pb-8 leading-normal">
@@ -19,11 +28,7 @@ function AboutPage() {
         <p className="mt-4 text-justify text-xl">
           I aspire writing framework-agnostic codes.
         </p>
-        <p className="mt-2 text-justify text-xl">
-          Trending technologies come and go. Understanding principles and
-          knowing how and when to implement the right pattern at the right time
-          is forever.
-        </p>
+
         <p className="mt-2 text-justify text-xl">
           I constantly try to improve the quality of my work and I'm always
           trying out new kinds of stuff.
@@ -55,33 +60,35 @@ function AboutPage() {
             Javascript
             <ul className="list-disc pl-10">
               <li>Typescript</li>
+
               <li>
                 Vue
                 <ul className="list-disc pl-10">
-                  <li>Vuex</li>
                   <li>Vuetify</li>
                   <li>Nuxt</li>
                 </ul>
               </li>
+
               <li>
                 React
                 <ul className="list-disc pl-10">
                   <li>Gatsby</li>
+                  <li>Next.js</li>
                   <li>React Native</li>
                 </ul>
               </li>
+
               <li>
                 NodeJS
                 <ul className="list-disc pl-10">
                   <li>Koa</li>
                   <li>Express</li>
+                  <li>NestJS</li>
                 </ul>
               </li>
-              <li>VideoJS</li>
-              <li>VelocityJS</li>
             </ul>
           </li>
-          <li>VPS</li>
+
           <li>Linux</li>
           <li>Docker</li>
           <li>CQRS</li>

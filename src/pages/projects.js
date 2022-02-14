@@ -1,6 +1,43 @@
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+const projects = [
+  {
+    title: "Vue Headless Combobox",
+    description: "A Vue.js component that implements WAI-ARIA focus trapping.",
+    link: "https://github.com/xxRockOnxx/vue-aria-focus-trap",
+    technologies: ["Vue"],
+  },
+  {
+    title: "Vue Headless Combobox",
+    description:
+      "A headless ComboBox Vue.js component that is fully accessible.",
+    link: "https://github.com/xxRockOnxx/vue-headless-combobox",
+    technologies: ["Vue"],
+  },
+  {
+    title: "OBS Facebook Live Comments",
+    description:
+      "A free website that allows personal Facebook Live comments feed to be on your stream without creating a page.",
+    link: "https://github.com/xxRockOnxx/obs-fb-live-comments",
+    technologies: ["Javascript"],
+  },
+  {
+    title: "3rdWheel",
+    description:
+      "A fun project I created for Valentine's day that allows people to register and look for third wheels for their Valentines.",
+    link: "https://rdwheel.firebaseapp.com/",
+    technologies: ["Nuxt", "Firebase", "TailwindCSS"],
+  },
+  {
+    title: "Bandmate",
+    description:
+      "A Tinder-like app for musicians who are looking for others they can collaborate with.",
+    link: "https://gitlab.com/captainskippah/bandmate",
+    technologies: ["React Native", "Typescript", "Mobx", "InversifyJS"],
+  },
+];
+
 function Chip({ text, ...props }) {
   let className =
     "inline-block h-8 leading-8 bg-gray-300 rounded-full px-4 text-sm font-semibold text-gray-700";
@@ -42,37 +79,6 @@ function ProjectCard({ title, description, link, technologies }) {
 }
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "OBS Facebook Live Comments",
-      description:
-        "A free website that allows personal Facebook Live comments feed to be on your stream without creating a page.",
-      link: "https://github.com/xxRockOnxx/obs-fb-live-comments",
-      technologies: ["Javascript"],
-    },
-    {
-      title: "3rdWheel",
-      description:
-        "A fun project I created for Valentine's day that allows people to register and look for third wheels for their Valentines.",
-      link: "https://rdwheel.firebaseapp.com/",
-      technologies: ["Nuxt", "Firebase", "TailwindCSS"],
-    },
-    {
-      title: "Merchandise Inventory/Accounting software",
-      description:
-        "CQRS is used here to provide different report views and Event Sourcing to have a history of the cash flow and the intent of the user.",
-      link: "https://gitlab.com/captainskippah/hbph",
-      technologies: ["Nuxt", "Lumen", "Event Sourcing", "CQRS", "DDD"],
-    },
-    {
-      title: "Bandmate",
-      description:
-        "A Tinder-like app for musicians who are looking for others they can collaborate with.",
-      link: "https://gitlab.com/captainskippah/bandmate",
-      technologies: ["React Native", "Typescript", "Mobx", "InversifyJS"],
-    },
-  ];
-
   return (
     <Layout>
       <SEO title="Projects" />
