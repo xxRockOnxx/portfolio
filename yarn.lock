@@ -4774,23 +4774,19 @@ gatsby-page-utils@^2.7.0:
     lodash "^4.17.21"
     micromatch "^4.0.4"
 
+gatsby-plugin-canonical-urls@^4.15.0:
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-4.15.0.tgz#58d5da1c0569d33c57a1a7e6025eb83755efda8b"
+  integrity sha512-/QutRMsGUAbDAm0QtdouGGHwCIxqRmYtbW5k+R+B8t2IidY9ZjVomCjmZ8ezvgQS84lQ7zkVFuezy8PpfKiy8g==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+
 gatsby-plugin-fathom@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-fathom/-/gatsby-plugin-fathom-2.1.1.tgz#b1e1102d3490786e037586dfcc2a4ab9c6127496"
   integrity sha512-t5xtF+Mo7x8GPhBO0gX3DF2slAfSXmut7u+IKkZ03sIvzlJ9VKaGMI1tetKxhe8/3Vylq7edn6lgZoiIjKDU3Q==
   dependencies:
     "@babel/runtime" "7.14.5"
-
-gatsby-plugin-manifest@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.7.0.tgz#8ee8fcddec51154c04ccfab1e36f78e7880e3438"
-  integrity sha512-jZsR7sqvJsxTm2J01ymPsCXlEoYw9duVQUR3oNy9VxHyuPOXctk2Cnp/vnWDZpQ6g+i7ha1RhyJEQgQEj1jhcQ==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.7.0"
-    gatsby-plugin-utils "^3.1.0"
-    semver "^7.3.5"
-    sharp "^0.29.3"
 
 gatsby-plugin-page-creator@^4.7.0:
   version "4.7.0"
