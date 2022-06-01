@@ -1,4 +1,5 @@
 module.exports = {
+  trailingSlash: "always",
   siteMetadata: {
     title: "Lemuel Flores",
     description: "Lemuel Flores - Fullstack Web Developer",
