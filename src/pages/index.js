@@ -6,10 +6,7 @@ import author from "../images/author.jpg";
 function IndexPage() {
   return (
     <Layout>
-      <SEO
-        title="Home"
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-      />
+      <SEO title="Home" />
 
       <div className="text-center">
         <img

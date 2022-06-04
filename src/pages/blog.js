@@ -33,10 +33,7 @@ function Article({ title, description, link }) {
 export default function BlogPage() {
   return (
     <Layout>
-      <SEO
-        title="Blog"
-        keywords={[`vue`, `nuxt`, `third-party`, `components`]}
-      />
+      <SEO title="Blog" />
 
       <section className="pb-8 leading-normal">
         <header className="text-center md:text-left">

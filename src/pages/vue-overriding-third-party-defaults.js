@@ -4,10 +4,7 @@ import SEO from "../components/seo";
 export default function BlogPost() {
   return (
     <Layout>
-      <SEO
-        title="Vue - Overriding Third-Party Defaults"
-        keywords={[["vue", "third-party", "components", "overriding", "props"]]}
-      />
+      <SEO title="Vue - Overriding Third-Party Defaults" />
 
       <h2 className="text-4xl font-bold">
         Vue - Overriding Third-Party Defaults

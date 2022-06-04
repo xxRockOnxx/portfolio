@@ -88,20 +88,7 @@ function ProjectCard({ title, description, link, technologies }) {
 export default function Projects() {
   return (
     <Layout>
-      <SEO
-        title="Projects"
-        keywords={[
-          `vue`,
-          `nuxt`,
-          `component`,
-          "library",
-          "vue-aria-focus-trap",
-          "vue-headless-combobox",
-          "wai-aria",
-          "focus trap",
-          "combobox",
-        ]}
-      />
+      <SEO title="Projects" />
 
       <h1 className="text-4xl font-bold">Projects</h1>
 

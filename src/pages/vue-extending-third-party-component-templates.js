@@ -5,16 +5,7 @@ import { Helmet } from "react-helmet";
 export default function BlogPost() {
   return (
     <Layout>
-      <SEO
-        title="Vue - Extending Third Party Component templates"
-        keywords={[
-          "vue",
-          "third-party",
-          "components",
-          "extending",
-          "templates",
-        ]}
-      />
+      <SEO title="Vue - Extending Third Party Component templates" />
 
       <h2 className="text-4xl font-bold">
         Vue - Extending Third Party Component templates

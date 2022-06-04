@@ -4,10 +4,7 @@ import SEO from "../components/seo";
 export default function BlogPost() {
   return (
     <Layout>
-      <SEO
-        title="Nuxt - Reuse Page Components"
-        keywords={["vue-router", "nuxt", "reuse", "page", "components"]}
-      />
+      <SEO title="Nuxt - Reuse Page Components" />
 
       <h2 className="text-4xl font-bold">
         Nuxt - Reuse Page Components in 2 simple steps

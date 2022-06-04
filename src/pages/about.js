@@ -6,19 +6,7 @@ import SEO from "../components/seo";
 function AboutPage() {
   return (
     <Layout>
-      <SEO
-        title="About"
-        keywords={[
-          `gatsby`,
-          `tailwindcss`,
-          `react`,
-          `next.js`,
-          `vue`,
-          `nuxt`,
-          `laravel`,
-          `lumen`,
-        ]}
-      />
+      <SEO title="About" />
 
       <section className="border-b pb-8 leading-normal">
         <header className="text-center md:text-left">
