@@ -19,7 +19,7 @@ function Layout({ children }) {
         <div className="text-grey-darkest flex min-h-screen flex-col font-sans">
           <Header siteTitle={data.site.siteMetadata.title} />
 
-          <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 py-8 md:p-8">
+          <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 py-16 md:px-8">
             {children}
           </div>
 
