@@ -3,6 +3,13 @@ import SEO from "../components/seo";
 
 const projects = [
   {
+    title: "ai-upscaler",
+    description:
+      "A free online video upscaling service powered by Real-ESRGAN and FFMPEG.",
+    link: "https://github.com/xxRockOnxx/ai-upscaler",
+    technologies: ["Node.js", "Fastify", "XState", "Bull", "Redis"],
+  },
+  {
     title: "[npm] vue-aria-focus-trap",
     description: "A Vue.js component that implements WAI-ARIA focus trapping.",
     link: "https://github.com/xxRockOnxx/vue-aria-focus-trap",
