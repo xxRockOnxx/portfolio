@@ -1,5 +1,5 @@
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
 import { Helmet } from "react-helmet";
 
 export default function BlogPost() {

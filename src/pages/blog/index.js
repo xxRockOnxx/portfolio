@@ -1,5 +1,5 @@
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
 
 function Article({ title, description, link }) {
   return (
@@ -43,19 +43,19 @@ export default function BlogPage() {
         <Article
           title="Nuxt - Reuse Page Components"
           description="A tutorial on how to reuse the same page component on different route with Nuxt.<br/>Common example is Create and Edit form page being the same."
-          link="/nuxt-reuse-page-components"
+          link="/blog/nuxt-reuse-page-components"
         />
 
         <Article
           title="Vue - Extending Third Party Component templates"
           description="The component you need looks perfect but you need a tiny bit of changes and forking is overkill for the task. What do you do instead?"
-          link="/vue-extending-third-party-component-templates"
+          link="/blog/vue-extending-third-party-component-templates"
         />
 
         <Article
           title="Vue - Overriding third-party defaults"
           description="Sometimes on some libraries you find yourself setting the same props to the same values over and over again but this can be solved by setting defaults."
-          link="/vue-overriding-third-party-defaults"
+          link="/blog/vue-overriding-third-party-defaults"
         />
       </section>
     </Layout>
