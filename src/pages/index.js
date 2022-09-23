@@ -6,27 +6,32 @@ function IndexPage() {
     <Layout>
       <SEO title="Home" />
 
-      <section className="border-b pb-8 leading-normal">
+      <section className="border-b pb-8">
         <header className="text-center md:text-left">
           <h2 className="text-4xl font-bold">About Me</h2>
         </header>
 
-        <p className="mt-4 text-justify text-xl">
-          Constantly learning different language, libraries, and frameworks.
+        <p className="mt-2 text-justify lg:mt-4 lg:text-xl">
+          Constantly expanding skillset by learning different language,
+          libraries, and frameworks.
         </p>
 
-        <p className="mt-4 text-justify text-xl">
+        <p className="mt-2 text-justify lg:mt-4 lg:text-xl">
           Building framework-agnostic skills.
         </p>
 
-        <div className="mt-4">
+        <p className="mt-2 text-justify lg:mt-4 lg:text-xl">
+          Contributes to open-source projects whenever possible.
+        </p>
+
+        <div className="mt-4 text-sm lg:text-base">
           <span className="font-bold">Email: </span>
           <a href="mailto:is101.lemuel@gmail.com" className="underline">
             is101.lemuel@gmail.com
           </a>
         </div>
 
-        <div className="mt-4">
+        <div className="mt-2 text-sm lg:mt-4 lg:text-base">
           <span className="font-bold">Github: </span>
           <a href="https://github.com/xxRockOnxx" className="underline">
             https://github.com/xxRockOnxx
@@ -48,6 +53,7 @@ function IndexPage() {
               <li>PHPUnit</li>
             </ul>
           </li>
+
           <li>
             Javascript
             <ul className="list-disc pl-10">
@@ -75,12 +81,14 @@ function IndexPage() {
                 <ul className="list-disc pl-10">
                   <li>Koa</li>
                   <li>Express</li>
+                  <li>Fastify</li>
                   <li>NestJS</li>
                 </ul>
               </li>
             </ul>
           </li>
 
+          <li>Go</li>
           <li>Linux</li>
           <li>Docker</li>
           <li>CQRS</li>
