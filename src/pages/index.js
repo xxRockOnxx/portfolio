@@ -11,16 +11,16 @@ function IndexPage() {
           <h2 className="text-4xl font-bold">About Me</h2>
         </header>
 
-        <p className="mt-2 text-justify lg:mt-4 lg:text-xl">
+        <p className="mt-4 leading-relaxed lg:text-xl">
           Constantly expanding skillset by learning different language,
           libraries, and frameworks.
         </p>
 
-        <p className="mt-2 text-justify lg:mt-4 lg:text-xl">
+        <p className="mt-2 leading-relaxed lg:mt-4 lg:text-xl">
           Building framework-agnostic skills.
         </p>
 
-        <p className="mt-2 text-justify lg:mt-4 lg:text-xl">
+        <p className="mt-2 leading-relaxed lg:mt-4 lg:text-xl">
           Contributes to open-source projects whenever possible.
         </p>
 
@@ -37,6 +37,19 @@ function IndexPage() {
             https://github.com/xxRockOnxx
           </a>
         </div>
+
+        <a
+          href="https://stackexchange.com/users/5819823"
+          className="mt-4 inline-block"
+        >
+          <img
+            src="https://stackexchange.com/users/flair/5819823.png"
+            width="208"
+            height="58"
+            alt="profile for captainskippah on Stack Exchange, a network of free, community-driven Q&amp;A sites"
+            title="profile for captainskippah on Stack Exchange, a network of free, community-driven Q&amp;A sites"
+          />
+        </a>
       </section>
 
       <section className="mt-8">
