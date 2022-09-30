@@ -1,3 +1,4 @@
+import { Disqus } from "gatsby-plugin-disqus";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
@@ -84,7 +85,7 @@ export default function BlogPost() {
         like:
       </p>
 
-      <pre className="language-json mt-8 bg-gray-200 p-4">
+      <pre className="p-4 mt-8 bg-gray-200 language-json">
         <code
           dangerouslySetInnerHTML={{
             __html:
@@ -102,7 +103,7 @@ export default function BlogPost() {
         "/edit/:name" route, and use the component from "create" route.
       </p>
 
-      <pre className="language-json mt-8 bg-gray-200 p-4">
+      <pre className="p-4 mt-8 bg-gray-200 language-json">
         <code
           dangerouslySetInnerHTML={{
             __html:
@@ -135,7 +136,7 @@ export default function BlogPost() {
         populate our name input otherwise if it's not there, it's just empty.
       </p>
 
-      <pre className="language-json mt-8 bg-gray-200 p-4">
+      <pre className="p-4 mt-8 bg-gray-200 language-json">
         <code
           dangerouslySetInnerHTML={{
             __html: `&lt;script&gt;
@@ -176,6 +177,15 @@ export default {
         <code className="font-bold">nuxt.config.js</code> and name the component{" "}
         <code className="font-bold">UserFormPage</code>.
       </p>
+
+      <div className="mt-20">
+        <Disqus
+          config={{
+            identifier: "nuxt-reuse-page-components",
+            title: "Nuxt - Reuse Page Components in 2 simple steps",
+          }}
+        />
+      </div>
     </Layout>
   );
 }

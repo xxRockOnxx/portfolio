@@ -1,3 +1,4 @@
+import { Disqus } from "gatsby-plugin-disqus";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
@@ -26,7 +27,7 @@ export default function BlogPost() {
         Imagine we have an API that returns an array of objects that looks like:
       </p>
 
-      <pre className="language-json mt-8 bg-gray-200 p-4">
+      <pre className="p-4 mt-8 bg-gray-200 language-json">
         <code
           dangerouslySetInnerHTML={{
             __html:
@@ -52,7 +53,7 @@ export default function BlogPost() {
         you have to do is import the component and change it like so:
       </p>
 
-      <pre className="language-js mt-8 bg-gray-200 p-4">
+      <pre className="p-4 mt-8 bg-gray-200 language-js">
         <code
           dangerouslySetInnerHTML={{
             __html:
@@ -99,7 +100,7 @@ export default function BlogPost() {
         solved:
       </div>
 
-      <pre className="language-js mt-8 bg-gray-200 p-4">
+      <pre className="p-4 mt-8 bg-gray-200 language-js">
         <code
           dangerouslySetInnerHTML={{
             __html:
@@ -123,6 +124,15 @@ export default function BlogPost() {
       <p className="mt-8 text-xl leading-loose">
         No need for a wrapper component. Less complex and effective.
       </p>
+
+      <div className="mt-20">
+        <Disqus
+          config={{
+            identifier: "vue-overriding-third-party-defaults",
+            title: "Vue - Overriding Third-Party Defaults",
+          }}
+        />
+      </div>
     </Layout>
   );
 }

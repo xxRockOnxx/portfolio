@@ -1,3 +1,4 @@
+import { Disqus } from "gatsby-plugin-disqus";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import { Helmet } from "react-helmet";
@@ -55,7 +56,7 @@ export default function BlogPost() {
         functionality from the vue-select. They wanted vue-select to:
       </p>
 
-      <ul className="mt-8 list-inside list-disc text-xl leading-loose ">
+      <ul className="mt-8 text-xl leading-loose list-disc list-inside ">
         <li>have slide animation</li>
         <li>go upwards if not within viewport.</li>
       </ul>
@@ -81,7 +82,7 @@ export default function BlogPost() {
         for the sliding. So here's how I did it:
       </p>
 
-      <pre className="language-json mt-8 bg-gray-200 p-4">
+      <pre className="p-4 mt-8 bg-gray-200 language-json">
         <code
           dangerouslySetInnerHTML={{
             __html:
@@ -238,6 +239,15 @@ export default function BlogPost() {
       <Helmet>
         <script async src="https://static.codepen.io/assets/embed/ei.js" />
       </Helmet>
+
+      <div className="mt-20">
+        <Disqus
+          config={{
+            identifier: "vue-extending-third-party-component-templates",
+            title: "Vue - Extending Third Party Component templates",
+          }}
+        />
+      </div>
     </Layout>
   );
 }
