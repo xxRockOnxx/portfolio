@@ -8,7 +8,7 @@ function IndexPage() {
 
       <section className="border-b pb-8">
         <header className="text-center md:text-left">
-          <h2 className="text-4xl font-bold">About Me</h2>
+          <h1 className="text-4xl font-bold">About Me</h1>
         </header>
 
         <p className="mt-4 leading-relaxed lg:text-xl">
@@ -54,7 +54,7 @@ function IndexPage() {
 
       <section className="mt-8">
         <header className="text-center leading-normal md:text-left">
-          <h2 className="text-4xl font-bold">Skills and Experience</h2>
+          <h1 className="text-4xl font-bold">Skills and Experience</h1>
         </header>
 
         <ul className="mt-4 list-disc pl-10 leading-loose">

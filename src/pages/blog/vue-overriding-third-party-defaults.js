@@ -4,11 +4,14 @@ import SEO from "../../components/seo";
 export default function BlogPost() {
   return (
     <Layout>
-      <SEO title="Vue - Overriding Third-Party Defaults" />
+      <SEO
+        title="Vue - Overriding Third-Party Defaults"
+        description="Sometimes on some libraries you find yourself setting the same props to the same values over and over again. This is how to set third-party defaults."
+      />
 
-      <h2 className="text-4xl font-bold">
+      <h1 className="text-4xl font-bold">
         Vue - Overriding Third-Party Defaults
-      </h2>
+      </h1>
 
       <p className="mt-8 text-xl leading-loose">
         Sometimes on some libraries you find yourself setting the same props to

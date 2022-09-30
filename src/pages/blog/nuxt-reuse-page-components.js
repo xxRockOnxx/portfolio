@@ -4,11 +4,16 @@ import SEO from "../../components/seo";
 export default function BlogPost() {
   return (
     <Layout>
-      <SEO title="Nuxt - Reuse Page Components" />
+      <SEO
+        title="Nuxt - Reuse Page Components in 2 simple steps"
+        description="Most of the time in a CRUD app, the Create page and Edit page are
+        entirely the same. How do you reuse the same page component then if you
+        are using Nuxt?"
+      />
 
-      <h2 className="text-4xl font-bold">
+      <h1 className="text-4xl font-bold">
         Nuxt - Reuse Page Components in 2 simple steps
-      </h2>
+      </h1>
 
       <p className="mt-8 text-xl leading-loose">
         Most of the time in a CRUD app, the Create page and Edit page are

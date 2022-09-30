@@ -5,11 +5,14 @@ import { Helmet } from "react-helmet";
 export default function BlogPost() {
   return (
     <Layout>
-      <SEO title="Vue - Extending Third Party Component templates" />
+      <SEO
+        title="Vue - Extending Third Party Component templates"
+        description="You found this library and it does exactly what you need however you want to change a minor detail. What do you do?"
+      />
 
-      <h2 className="text-4xl font-bold">
+      <h1 className="text-4xl font-bold">
         Vue - Extending Third Party Component templates
-      </h2>
+      </h1>
 
       <p className="mt-8 text-xl leading-loose">
         You found this library and it does exactly what you need however you
