@@ -3,6 +3,13 @@ import SEO from "../components/seo";
 
 const projects = [
   {
+    title: "Wordle Word Finder",
+    description:
+      "Simple app that finds 5 letter words given the good letters, bad letters, and letter positions.",
+    link: "https://github.com/xxRockOnxx/wordle",
+    technologies: ["Nuxt 3", "TailwindCSS"],
+  },
+  {
     title: "ai-upscaler",
     description:
       "A free online video upscaling service powered by Real-ESRGAN and FFMPEG.",
