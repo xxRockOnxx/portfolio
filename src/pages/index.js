@@ -75,7 +75,6 @@ function IndexPage() {
               <li>
                 Vue
                 <ul className="list-disc pl-10">
-                  <li>Vuetify</li>
                   <li>Nuxt</li>
                 </ul>
               </li>
@@ -101,7 +100,14 @@ function IndexPage() {
             </ul>
           </li>
 
-          <li>Go</li>
+          <li>
+            Go
+            <ul className="list-disc pl-10">
+              <li>Gin</li>
+            </ul>
+          </li>
+
+          <li>AWS</li>
           <li>Linux</li>
           <li>Docker</li>
           <li>CQRS</li>
