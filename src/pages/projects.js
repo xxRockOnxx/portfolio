@@ -3,6 +3,18 @@ import SEO from "../components/seo";
 
 const projects = [
   {
+    title: "yt-dlp-s3",
+    description: "Stream yt-dlp downloads directly to S3-compatible storage.",
+    link: "https://github.com/xxRockOnxx/yt-dlp-s3",
+    technologies: ["Node.js", "S3", "yt-dlp"],
+  },
+  {
+    title: "MIDI Remapper",
+    description: "A free online tool to remap MIDI notes.",
+    link: "https://github.com/xxRockOnxx/midi-remapper",
+    technologies: ["Nuxt 3", "TailwindCSS"],
+  },
+  {
     title: "Wordle Word Finder",
     description:
       "Simple app that finds 5 letter words given the good letters, bad letters, and letter positions.",
