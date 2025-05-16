@@ -91,7 +91,7 @@ function ProjectCard({ title, description, link, technologies }) {
       </div>
 
       <p
-        className="whitespace-pre-wrap px-6 py-4 text-lg leading-normal text-gray-600"
+        className="px-6 py-4 text-lg leading-normal whitespace-pre-wrap text-gray-600"
         dangerouslySetInnerHTML={{ __html: description }}
       />
 

@@ -1,23 +1,29 @@
-@tailwind base;
+@import "tailwindcss";
 
-body {
-  @apply text-gray-800;
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  body {
+    @apply text-gray-800;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-wide text-gray-800;
+  }
+
+  pre {
+    overflow: auto;
+    width: 100%;
+  }
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply tracking-wide text-gray-800;
-}
-
-pre {
-  overflow: auto;
-  width: 100%;
-}
-
-@tailwind components;
-
-@tailwind utilities;
