@@ -12,15 +12,11 @@
   "scripts": {
     "analyze:lint": "eslint --ext .jsx --ext .js .",
     "analyze:prettier": "prettier --list-different '**/*.{js,css,md,json}'",
-    "analyze": "yarn run analyze:lint && yarn run analyze:prettier",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
     "fix:prettier": "prettier --write '**/*.{js,css,md,json}'",
-    "fix": "yarn run fix:lint && yarn run fix:prettier",
-    "start": "yarn run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "serve": "gatsby serve"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.7",
