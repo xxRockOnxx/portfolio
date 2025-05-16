@@ -3,3 +3,9 @@ package = "@netlify/plugin-sitemap"
 
   [plugins.inputs]
   trailingSlash = true
+
+[[plugins]]
+package = "netlify-plugin-submit-sitemap"
+
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
