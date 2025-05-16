@@ -9,3 +9,8 @@ package = "netlify-plugin-submit-sitemap"
 
 [[plugins]]
 package = "@netlify/plugin-lighthouse"
+
+[[redirects]]
+from = "/resume"
+to = "https://drive.google.com/file/d/1TMLDzlgmjahIMT7mA9XVVJUBcjvGzJXR/preview"
+status = 200
