@@ -1,43 +1,20 @@
 {
-  "name": "lemuelflores",
-  "description": "Lemuel Flores' portfolio",
-  "version": "1.0.0",
-  "author": "Lemuel Flores <is101.lemuel@gmail.com>",
-  "dependencies": {
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0"
-  },
+  "name": "portfolio-astro",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "analyze:lint": "eslint --ext .jsx --ext .js .",
-    "analyze:prettier": "prettier --list-different '**/*.{js,css,md,json}'",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "fix:lint": "eslint --ext .jsx --ext .js . --fix",
-    "fix:prettier": "prettier --write '**/*.{js,css,md,json}'",
-    "serve": "gatsby serve"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.7",
-    "babel-preset-gatsby": "^2.7.0",
-    "eslint": "^8.9.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "gatsby": "^4.7.1",
-    "gatsby-plugin-canonical-urls": "^4.15.0",
-    "gatsby-plugin-postcss": "^5.7.0",
-    "gatsby-plugin-react-helmet": "^5.7.0",
-    "postcss": "^8.4.6",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.4.0",
+    "@tailwindcss/vite": "^4.1.7",
+    "astro": "^5.7.13",
     "tailwindcss": "^4.1.7"
   },
-  "prettier": {
-    "plugins": [
-      "prettier-plugin-tailwindcss"
-    ]
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
   }
 }

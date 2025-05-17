@@ -1,7 +1,14 @@
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+---
+import Layout from "../layouts/Layout.astro";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  link: string;
+  technologies: string[];
+}
+
+const projects: Project[] = [
   {
     title: "yt-dlp-s3",
     description: "Stream yt-dlp downloads directly to S3-compatible storage.",
@@ -53,7 +60,7 @@ const projects = [
     description:
       "A fun project I created for Valentine's day that allows people to register and look for third wheels for their Valentines.",
     link: "https://rdwheel.firebaseapp.com/",
-    technologies: ["Nuxt", "Firebase", "TailwindCSS"],
+    technologies: ["Next", "Firebase", "TailwindCSS"],
   },
   {
     title: "Bandmate",
@@ -63,59 +70,43 @@ const projects = [
     technologies: ["React Native", "Typescript", "Mobx", "InversifyJS"],
   },
 ];
+---
 
-function Chip({ text, ...props }) {
-  let className =
-    "inline-block h-8 px-4 text-sm font-semibold leading-8 text-gray-700 bg-gray-300 rounded-full";
+<Layout title="Projects">
+  <h1 class="text-4xl font-bold">Projects</h1>
 
-  if (props.className) {
-    className += ` ${props.className}`;
-  }
+  <ul class="mt-12 space-y-8">
+    {
+      projects.map((project) => (
+        <li class="rounded border shadow-md">
+          <div class="px-6 pt-6">
+            <a
+              href={project.link}
+              class="inline-flex items-center text-xl font-bold tracking-wide no-underline hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="24" height="24" class="mr-3">
+                <path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z" />
+              </svg>
+              <h2 class="ml-0">{project.title}</h2>
+            </a>
+          </div>
 
-  return <span className={className}>{text}</span>;
-}
+          <p
+            class="px-6 py-4 text-lg leading-normal whitespace-pre-wrap text-gray-600"
+            set:html={project.description}
+          />
 
-function ProjectCard({ title, description, link, technologies }) {
-  return (
-    <li className="mt-8 rounded border shadow-md">
-      <div className="px-6 pt-6">
-        <a
-          href={link}
-          className="inline-flex items-center text-xl font-bold tracking-wide no-underline hover:underline"
-        >
-          <svg viewBox="0 0 24 24" width="24" height="24">
-            <path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z" />
-          </svg>
-          <h2 className="ml-3">{title}</h2>
-        </a>
-      </div>
-
-      <p
-        className="px-6 py-4 text-lg leading-normal whitespace-pre-wrap text-gray-600"
-        dangerouslySetInnerHTML={{ __html: description }}
-      />
-
-      <div className="-mx-1 -mt-2 px-6 pb-6">
-        {technologies.map((technology, index) => (
-          <Chip className="mx-1 mt-2" text={technology} key={index} />
-        ))}
-      </div>
-    </li>
-  );
-}
-
-export default function Projects() {
-  return (
-    <Layout>
-      <SEO title="Projects" />
-
-      <h1 className="text-4xl font-bold">Projects</h1>
-
-      <ul className="list-reset mt-4">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
-      </ul>
-    </Layout>
-  );
-}
+          <div class="-mx-1 -mt-2 px-6 pb-6">
+            {project.technologies.map((technology: string) => (
+              <span class="inline-block h-8 px-4 text-sm font-semibold leading-8 text-gray-700 bg-gray-300 rounded-full mx-1 mt-2">
+                {technology}
+              </span>
+            ))}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

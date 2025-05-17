@@ -1,8 +1,8 @@
 [[plugins]]
 package = "@netlify/plugin-sitemap"
 
-  [plugins.inputs]
-  trailingSlash = true
+[plugins.inputs]
+trailingSlash = true
 
 [[plugins]]
 package = "netlify-plugin-submit-sitemap"
@@ -10,7 +10,6 @@ package = "netlify-plugin-submit-sitemap"
 [[plugins]]
 package = "@netlify/plugin-lighthouse"
 
-[[redirects]]
-from = "/resume"
-to = "https://drive.google.com/file/d/1TMLDzlgmjahIMT7mA9XVVJUBcjvGzJXR/preview"
-status = 200
+[build]
+command = "astro build"
+publish = "dist"

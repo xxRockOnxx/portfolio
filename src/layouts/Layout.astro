@@ -1,0 +1,151 @@
+---
+import "../styles/style.css";
+import { ClientRouter } from "astro:transitions";
+
+const siteMetadata = {
+  title: "Lemuel Flores",
+  description: "Lemuel Flores - Fullstack Web Developer",
+  author: "@xxRockOnxx",
+};
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = siteMetadata.title, description = siteMetadata.description } =
+  Astro.props;
+
+const siteTitle = siteMetadata.title;
+---
+
+<!doctype html>
+<html lang="en" transition:animate="none">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={siteMetadata.author} />
+    <link rel="canonical" href={Astro.url.href} />
+    <ClientRouter />
+  </head>
+  <body class="flex flex-col min-h-screen font-sans">
+    <header>
+      <nav class="bg-teal-500">
+        <div
+          class="mx-auto flex max-w-5xl flex-wrap items-center justify-between p-4 md:p-8"
+        >
+          <a href="/">
+            <span class="text-xl font-bold tracking-wide text-white">
+              {siteTitle}
+            </span>
+          </a>
+          <button
+            id="mobile-menu-button"
+            class="flex items-center rounded border border-white px-3 py-2 text-white md:hidden"
+            aria-label="Open Menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              class="h-3 w-3 fill-current"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+          <div
+            id="mobile-menu"
+            class="hidden w-full md:flex md:w-auto md:items-center"
+          >
+            <div class="flex gap-6 text-sm">
+              <a
+                href="/"
+                class="mt-4 block text-white no-underline md:mt-0 md:inline-block hover:underline"
+              >
+                Home
+              </a>
+              <a
+                href="/projects"
+                class="mt-4 block text-white no-underline md:mt-0 md:inline-block hover:underline"
+              >
+                Projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="w-full px-4 py-16 md:px-8 max-w-5xl mx-auto flex-1">
+      <slot />
+    </main>
+
+    <footer class="bg-blue-500">
+      <div
+        class="md:flex-no-wrap mx-auto flex max-w-5xl flex-wrap p-4 text-sm md:p-8"
+      >
+        <p class="w-full text-center text-white md:w-auto md:text-left">
+          Created with
+          <a
+            href="https://astro.build/"
+            class="font-bold text-white no-underline hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Astro
+          </a>
+          and
+          <a
+            href="https://tailwindcss.com/"
+            class="font-bold text-white no-underline hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tailwind CSS
+          </a>
+        </p>
+
+        <div
+          class="mt-2 flex items-center gap-4 w-full text-center md:mt-0 md:ml-auto md:w-auto md:text-right"
+        >
+          <a
+            href="https://github.com/xxRockOnxx"
+            class="font-bold text-white no-underline hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://gitlab.com/captainskippah"
+            class="font-bold text-white no-underline hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitLab
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener("click", () => {
+          const isExpanded =
+            menuButton.getAttribute("aria-expanded") === "true" || false;
+          menuButton.setAttribute("aria-expanded", (!isExpanded).toString());
+          mobileMenu.classList.toggle("hidden");
+          mobileMenu.classList.toggle("block"); // Or use specific classes for display
+        });
+      }
+    </script>
+  </body>
+</html>
