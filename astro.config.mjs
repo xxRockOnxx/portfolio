@@ -12,6 +12,6 @@ export default defineConfig({
   },
   redirects: {
     "/resume":
-      "https://drive.google.com/file/d/1TMLDzlgmjahIMT7mA9XVVJUBcjvGzJXR/preview",
+      "https://drive.google.com/file/d/1R3K3zIe79CP54toVWgCFUoWpyJkVdTpj/preview",
   },
 });
