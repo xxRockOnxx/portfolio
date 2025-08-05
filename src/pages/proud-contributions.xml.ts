@@ -17,7 +17,7 @@ export const GET: APIRoute = (context) => {
       {
         title: "freqtrade/frequi: Add heikin ashi format",
         description:
-          "This contribution adds quality-of-life improvment with a very simple checkbox to the Freqtrade UI to allow users to toggle between the default candlestick format and the Heikin Ashi format. This is a popular format among traders and this contribution makes it easier for users to switch between the two formats.",
+          "This contribution adds quality-of-life improvement with a very simple checkbox to the Freqtrade UI to allow users to toggle between the default candlestick format and the Heikin Ashi format. This is a popular format among traders and this contribution makes it easier for users to switch between the two formats.",
         link: "https://github.com/freqtrade/frequi/pull/698",
       },
       {
